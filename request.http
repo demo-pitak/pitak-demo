@@ -1,0 +1,13 @@
+### GET
+
+GET http://localhost:6060/category
+
+### POST
+
+POST  http://localhost:6060/category
+
+Content-Type: "application/json"
+
+{
+  "category_title":"Andijon-Toshkent"
+}

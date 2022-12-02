@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc -p . && nodemon ./dist/server.js",
+    "dev": "nodemon server.ts",
+    "migration:generate": "typeorm-ts-node-esm migration:generate ./src/migrations/updated -d ./src/config/ormconfig.ts",
+    "migration:run": "typeorm-ts-node-esm migration:run -d ./src/config/ormconfig.ts",
+    "migration:revert": "typeorm migration:revert -d ./dist/src/config/ormconfig.js"
   },
   "keywords": [],
   "author": "",
